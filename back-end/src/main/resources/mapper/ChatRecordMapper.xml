@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.backend.mapper.ChatRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.backend.model.domain.ChatRecord">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="record" column="record" jdbcType="VARCHAR"/>
+            <result property="sendUser" column="sendUser" jdbcType="VARCHAR"/>
+            <result property="receiveUser" column="receiveUser" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,record,sendUser,
+        receiveUser
+    </sql>
+</mapper>

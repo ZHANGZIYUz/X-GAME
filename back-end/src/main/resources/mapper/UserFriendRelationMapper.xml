@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.backend.mapper.UserFriendRelationMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.backend.model.domain.UserFriendRelation">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="mainUserId" column="mainUserId" jdbcType="BIGINT"/>
+            <result property="friendUserId" column="friendUserId" jdbcType="BIGINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,mainUserId,friendUserId,
+        createTime,isDelete
+    </sql>
+</mapper>
